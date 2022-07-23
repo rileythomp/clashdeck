@@ -1,0 +1,204 @@
+// Default 
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #6f2da8;
+    color: white;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Custom 
+
+.modal {
+    position: fixed; 
+    z-index: 2; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+}
+
+.modal-content {
+    margin: auto;
+    padding: 2em;
+    padding-top: 0.5em;
+    border: 1px solid #888;
+    width: 25em;
+    background-color: #CBC3E3;
+
+    #clash-deck-info {
+        padding-right: 2.5em;
+
+        h2 {
+            margin-top: 0em;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+
+
+}
+
+  
+#close-info {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+
+  }
+  
+#close-info:hover,
+#close-info:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2; 
+    cursor: pointer; 
+}
+
+#info {
+    text-align:center;
+    line-height:5em;
+    width:5em;
+    height:5em;
+    font-size:1em;
+    position: absolute;
+    bottom: 2em;
+    right: 3em;
+
+    i {
+        font-size: 4em;
+        color: #CBC3E3;
+    }
+
+    i:hover {
+        cursor: pointer;
+    }
+}
+
+#page-title {
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+}
+
+#input-container {
+    input {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        font-size: 1.5em;
+    }
+}
+
+#deck-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .deck-card {
+        padding: 1em;
+        margin: 0.5em;
+        border: 1px solid black;
+        border-radius: 1em;
+        background-color: #CBC3E3;
+
+        .card-name {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    }
+}
+
+.lds-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    margin-top: 1em;
+}
+.lds-grid div {
+    border-radius: 50%;
+    background: #CBC3E3ed;
+    animation: lds-grid 1.2s linear infinite;
+    margin: 2em;
+    padding: 3em;
+}
+.lds-grid div:nth-child(1) {
+    animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+    animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+    animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+    animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(5) {
+    animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(6) {
+    animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(7) {
+    animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(8) {
+    animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+    0%, 100% {
+         opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}      
