@@ -15,7 +15,7 @@
   <div *ngIf='!showLoading' id='deck-container'>
     <div class='deck-card' *ngFor='let card of deck'>
       <p class='card-name'>{{card.card_name}}</p>
-      <img src="{{card.card_url}}" alt="">
+      <img [src]="sanitize(card.card_url)" alt="">
     </div>    
   </div>
 

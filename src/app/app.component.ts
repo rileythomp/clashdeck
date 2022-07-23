@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ClashApiService } from './clash-api.service';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
 	showLoading: boolean = false;
 	showOverlay: boolean = false;
 
-	constructor(private clashApi: ClashApiService) { }
+	constructor(private clashApi: ClashApiService, private sanitizer:DomSanitizer) { }
 
 	ngOnInit() {
 	}
@@ -40,5 +41,9 @@ export class AppComponent {
 
 	closeInfo() {
 		this.showOverlay = false;
+	}
+
+	sanitize(url:string){
+		return this.sanitizer.bypassSecurityTrustUrl(url);
 	}
 }
