@@ -21,8 +21,6 @@ export class AppComponent {
 	@HostListener('document:keypress', ['$event'])
 	handleKeyboardEvent(event: KeyboardEvent) {
 		if (event.key === 'Enter') {
-			console.log(this.player)
-			console.log(this.trophies)
 			this.clashApi.getDeck(this.player, this.trophies).subscribe(
 				deck => {
 					if (deck == null) {
