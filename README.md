@@ -11,7 +11,7 @@ Enter your Clash Royale opponent's name and trophy count before a game starts. O
 ---
 
 
-The backend is done in **Python** with **Flask**. It's hosted on **Heroku**. 
+The backend is done in **Python** with **Flask**. It's hosted on **Heroku**. **Beautiful Soup** is used to scrape player card info from https://royaleapi.com.
 
 The frontend is done with **Angular** and **TypeScript**. It's hosted on **Netlify**.
 
